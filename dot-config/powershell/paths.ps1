@@ -5,6 +5,7 @@ if ($IsWindows) {
 }
 
 $extra_paths = "~/.cargo/bin/",
+     "~/.bun/bin",
      "~/.local/bin/",
      "~/.dotnet/tools"
 
