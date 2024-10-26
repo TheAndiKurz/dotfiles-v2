@@ -1,5 +1,6 @@
 $modules = "git",
-    "odin"
+    "odin",
+    "magic"
 
 $modules | ForEach-Object {
     . "$PSScriptRoot/$_.ps1"

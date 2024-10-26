@@ -1,7 +1,7 @@
-$seperator = ":"
+$separator = ":"
 
 if ($IsWindows) {
-     $seperator = ";"
+     $separator = ";"
 }
 
 $extra_paths = "~/.cargo/bin/",
@@ -10,19 +10,20 @@ $extra_paths = "~/.cargo/bin/",
      "~/.dotnet/tools"
 
 $unix_paths = "/opt/nvim-linux64/bin",
-     "~/.local/kitty.app/bin"
+     "~/.local/kitty.app/bin",
+     "~/.modular/bin"
 
 $windows_paths = ""
 
-$env:PATH += $seperator
-$env:PATH += $extra_paths | Join-String -Separator $seperator
+$env:PATH += $separator
+$env:PATH += $extra_paths | Join-String -Separator $separator
 
 if ($IsWindows) {
-     $env:PATH += $seperator
-     $env:PATH += $windows_paths | Join-String -Separator $seperator
+     $env:PATH += $separator
+     $env:PATH += $windows_paths | Join-String -Separator $separator
 }
 
-if ($IsUnix) {
-     $env:PATH += $seperator
-     $env:PATH += $unix_paths | Join-String -Seperator $seperator
+if (-not $IsWindows) {
+     $env:PATH += $separator
+     $env:PATH += $unix_paths | Join-String -Separator $separator
 }
