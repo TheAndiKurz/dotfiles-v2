@@ -7,8 +7,5 @@ To install them just run `stow --dotfiles . --target=$HOME` while in the root of
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) better cd
 - [`oh-my-posh`](https://ohmyposh.dev/) terminal look
 - [`carapace`](https://carapace.sh/) cli completions
+- [`Kanata`](https://github.com/jtroo/kanata/tree/main) Key remapping
 
-## Key remapping
-
-If you want to remap the keys you should install 
-[Kanata](https://github.com/jtroo/kanata/tree/main).
