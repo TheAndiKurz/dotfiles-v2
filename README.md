@@ -1,4 +1,4 @@
-# My Powershell Dotfiles for Linux (I use ARCH btw.)
+# My Powershell Dotfiles for Linux
 
 To install them just run `stow --dotfiles . --target=$HOME` while in the root of the directory.
 
