@@ -1,0 +1,10 @@
+[language-server.typescript-language-server]
+args = [ "--stdio" ]
+config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }
+
+[language-server.roslyn]
+command = "roslyn-language-server"
+
+[[language]]
+name = "c-sharp"
+language-servers = ["roslyn"]

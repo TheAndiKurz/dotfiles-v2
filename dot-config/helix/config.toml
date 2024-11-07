@@ -1,4 +1,4 @@
-theme = "ayu_dark"
+theme = "ayu_mirage"
 
 [editor]
 line-number = "relative"
@@ -8,4 +8,7 @@ mouse = false
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.soft-wrap]
+enable = true
 
