@@ -10,13 +10,13 @@
 # $env.PATH = ($env.PATH | uniq)
 
 $env.PATH = ($env.PATH | split row (char esep))
-$env.PATH | append "~/.cargo/bin"
-$env.PATH | append "~/.bun/bin"
-$env.PATH | append "~/.local/bin/"
-$env.PATH | append "~/.dotnet/tools"
+$env.PATH = $env.PATH | append "~/.cargo/bin"
+$env.PATH = $env.PATH | append "~/.bun/bin"
+$env.PATH = $env.PATH | append "~/.local/bin/"
+$env.PATH = $env.PATH | append "~/.dotnet/tools"
 
-$env.PATH | append "/opt/nvim-linux64/bin"
-$env.PATH | append "~/.local/kitty.app/bin"
-$env.PATH | append "~/.modular/bin"
+$env.PATH = $env.PATH | append "/opt/nvim-linux64/bin"
+$env.PATH = $env.PATH | append "~/.local/kitty.app/bin"
+$env.PATH = $env.PATH | append "~/.modular/bin"
 $env.PATH = ($env.PATH | uniq)
 
