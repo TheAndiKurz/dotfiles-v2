@@ -99,5 +99,5 @@ zoxide init --cmd cd nushell | save --force ~/.cache/nu/zoxide.nu
 carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
 
 # my environment vars
-$env.EDITOR = "hx"
+$env.EDITOR = "nvim"
 

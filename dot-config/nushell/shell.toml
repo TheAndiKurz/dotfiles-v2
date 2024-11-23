@@ -1,84 +1,77 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
-version = 2
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
 final_space = true
-console_title_template = "{{ .Shell }} in {{ .Folder }}"
 
+[palette]
+  grey = '#888888'
+  orange = '#F88379'
+  yellow = '#F3AE35'
+
+[secondary_prompt]
+  template = '>> '
+  background = 'transparent'
+  foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}', '{{ if eq .Code 0 }}magenta{{ end }}']
+
+[transient_prompt]
+  template = '> '
+  background = 'transparent'
+  foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}', '{{ if eq .Code 0 }}magenta{{ end }}']
 
 [[blocks]]
-  type = "prompt"
-  alignment = "left"
+  type = 'prompt'
+  alignment = 'left'
   newline = true
 
   [[blocks.segments]]
-    type = "path"
-    style = "plain"
-    foreground = "blue"
-    background = "transparent"
-    template = "{{ path .Path .Location }}"
+    template = '{{ path .Path .Location }}'
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
 
     [blocks.segments.properties]
-      style = "full"
-  
+      cache_duration = 'none'
+      style = 'full'
+
   [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:yellow"
-    background = "transparent"
-    template = " <p:grey></> {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }}{{ end }} {{ .HEAD }}<p:orange>{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}</>"
+    template = ' <p:grey></> {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }}{{ end }} {{ .HEAD }}<p:orange>{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}</>'
+    foreground = 'p:yellow'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
 
     [blocks.segments.properties]
-      commit_icon = "@"
+      cache_duration = 'none'
+      commit_icon = '@'
       fetch_status = true
       fetch_upstream_icon = true
 
 [[blocks]]
-  type = "rprompt"
-  overflow = "hidden"
+  type = 'rprompt'
+  overflow = 'hidden'
 
   [[blocks.segments]]
-    type = "executiontime"
-    style = "plain"
-    foreground = "yellow"
-    background = "transparent"
-    template = "{{ div .Ms 1000 }}s"
+    template = '{{ div .Ms 1000 }}s'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       threshold = 5000
 
-  
 [[blocks]]
-  type = "prompt"
-  alignment = "left"
+  type = 'prompt'
+  alignment = 'left'
   newline = true
-  
+
   [[blocks.segments]]
-    type = "text"
-    style = "plain"
-    foreground_templates = [
-        "{{ if gt .Code 0 }}red{{ end }}",
-        "{{ if eq .Code 0 }}magenta{{ end }}"
-    ]
-    background = "transparent"
-    template = ">"
+    template = '>'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}', '{{ if eq .Code 0 }}magenta{{ end }}']
 
-[transient_prompt]
-  foreground_templates = [
-    "{{ if gt .Code 0 }}red{{ end }}",
-    "{{ if eq .Code 0 }}magenta{{ end }}"
-  ]
-  background = "transparent"
-  template = "> "
-
-[secondary_prompt]
-  foreground_templates = [
-    "{{ if gt .Code 0 }}red{{ end }}",
-    "{{ if eq .Code 0 }}magenta{{ end }}"
-  ]
-  background = "transparent"
-  template = ">> "
-
-[palette]
-  yellow = "#F3AE35"
-  orange = "#F88379"
-  grey = "#888888"
+    [blocks.segments.properties]
+      cache_duration = 'none'
