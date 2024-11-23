@@ -1,3 +1,6 @@
+;; set shell
+(setenv "ESHELL" "/bin/bash")
+
 ;; add melpa packages to package manager
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
@@ -12,7 +15,7 @@
 (menu-bar-mode -1)
 
 (global-display-line-numbers-mode)
-(set-face-attribute 'default nil :height 200)
+(set-face-attribute 'default nil :height 150)
 
 ;; ido is for completion in the minibuffer
 (require 'smex)
@@ -32,13 +35,17 @@
 (add-hook 'global-tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 
 ;; lsp support
-(setq lsp-keymap-prefix "s-l")
+(setq lsp-keymap-prefix "M-l")
 
 (require 'lsp-mode)
+(add-hook 'csharp-mode-hook #'lsp)
+(add-hook 'go-mode-hook #'lsp)
 (add-hook 'rust-mode-hook #'lsp)
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; git controll
-(require 'magit)
+(require 'which-key)
+(which-key-mode)
 
+;; git control
+(require 'magit)
 

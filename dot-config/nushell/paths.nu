@@ -18,5 +18,6 @@ $env.PATH = $env.PATH | append "~/.dotnet/tools"
 $env.PATH = $env.PATH | append "/opt/nvim-linux64/bin"
 $env.PATH = $env.PATH | append "~/.local/kitty.app/bin"
 $env.PATH = $env.PATH | append "~/.modular/bin"
+$env.PATH = $env.PATH | append "~/go/bin"
 $env.PATH = ($env.PATH | uniq)
 
