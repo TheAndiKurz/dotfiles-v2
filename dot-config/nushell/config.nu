@@ -1,4 +1,4 @@
-$en.config.history.file_format = "sqlite"
+$env.config.history.file_format = "sqlite"
 
 $env.config.history.max_size = 5_000_000
 
@@ -153,7 +153,7 @@ $env.config.shell_integration.osc9_9 = false
 # When true, the `ls` command will generate clickable links that can be launched in another
 # application by the terminal.
 # Note: This setting replaces the now deprecated `ls.show_clickable_links`
-$env.config.shell.integration.osc8 = true
+$env.config.shell_integration.osc8 = true
 
 # osc133 (bool):
 # true/false to enable/disable OSC 133 support, a set of several escape sequences which
