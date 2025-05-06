@@ -68,3 +68,6 @@ carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
 # my environment vars
 $env.EDITOR = "nvim"
 
+$env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
+$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
+
