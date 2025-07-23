@@ -1,2 +1,5 @@
 theme = rose-pine
 font-family = "FiraCode Nerd Font"
+
+clipboard-read = allow
+clipboard-write = allow
