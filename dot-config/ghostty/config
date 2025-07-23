@@ -1,4 +1,4 @@
-theme = grovbox
+theme = GruvboxDark
 font-family = "FiraCode Nerd Font"
 
 clipboard-read = allow
