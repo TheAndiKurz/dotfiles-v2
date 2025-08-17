@@ -1,2 +1,4 @@
-theme = rose-pine
+theme = GruvboxDark
 font-family = "FiraCode Nerd Font"
+
+confirm-close-surface = false

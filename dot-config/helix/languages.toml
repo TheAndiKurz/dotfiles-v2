@@ -2,9 +2,10 @@
 args = [ "--stdio" ]
 config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }
 
-[language-server.roslyn]
-command = "roslyn-language-server"
+[[language]]
+name = "odin"
+auto-format = true
 
 [[language]]
-name = "c-sharp"
-language-servers = ["roslyn"]
+name = "go"
+auto-format = true
