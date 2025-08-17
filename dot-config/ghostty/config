@@ -2,3 +2,5 @@ theme = GruvboxDark
 font-family = "FiraCode Nerd Font"
 
 confirm-close-surface = false
+clipboard-read = allow
+clipboard-write = allow
