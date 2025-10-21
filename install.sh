@@ -12,10 +12,11 @@ if [ -e ~/.bashrc ] && [ ! -L ~/.bashrc ]; then
     mv ~/.bashrc ~/.bashrc.bkp
 fi
 ln -sf ~/dotfiles/dot-bashrc ~/.bashrc
-ln -sf ~/dotfiles/dot-gitconfig ~/.gitconfig 
+ln -sf ~/dotfiles/dot-gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/dot-fonts ~/.fonts
 
 ln -sf ~/dotfiles/dot-config/fontconfig ~/.config/
 ln -sf ~/dotfiles/dot-config/ghostty ~/.config/
+ln -sf ~/dotfiles/dot-config/zed ~/.config/
 
 source ~/.bashrc
