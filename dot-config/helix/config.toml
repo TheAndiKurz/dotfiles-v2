@@ -12,3 +12,11 @@ select = "underline"
 [editor.soft-wrap]
 enable = true
 
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 0
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "warning"
