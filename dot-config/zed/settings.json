@@ -39,11 +39,5 @@
     "light": "Zed (Default)",
     "dark": "Zed (Default)"
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 15.0,
-  "theme": {
-    "mode": "system",
-    "light": "Gruvbox Light",
-    "dark": "Gruvbox Dark"
-  }
+  "theme": "One Dark"
 }
