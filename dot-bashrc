@@ -119,3 +119,4 @@ fi
 export PATH="$PATH:~/.local/bin"
 
 eval "$(zoxide init --cmd cd bash)"
+. "$HOME/.cargo/env"
