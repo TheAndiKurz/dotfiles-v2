@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 
-# konsave
-if ! hash konsave 2>/dev/null; then
-    if hash yay 2>/dev/null; then
-        yay -S konsave
-    else 
-        echo "Install konsave"
-        exit
-    fi
-fi
+# to run this you need the following programs pre installed
+# - konsave (if you want the kde config)
+# - nushell
 
 # zoxide
 if ! hash zoxide 2>/dev/null; then
@@ -28,7 +22,13 @@ ln -sf ~/dotfiles/dot-config/ghostty ~/.config/
 ln -sf ~/dotfiles/dot-config/zed ~/.config/
 ln -sf ~/dotfiles/dot-config/nushell ~/.config/
 
-konsave -r theandikurz
-konsave -i theandikurz.knsv
+if ! hash konsave 2>/dev/null; then
+    konsave -r theandikurz
+    konsave -i theandikurz.knsv
+fi
+
+if ! hash starship 2>/dev/null; then
+    curl -sS https://starship.rs/install.sh | sh
+fi
 
 source ~/.bashrc

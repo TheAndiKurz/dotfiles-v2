@@ -70,7 +70,7 @@ $env.config.completions.algorithm = "fuzzy"
 $env.config.completions.sort = "smart"
 
 # case_sensitive (bool): true/false to enable/disable case-sensitive completions
-$env.config.completions.case_sensitive = false 
+$env.config.completions.case_sensitive = false
 
 # quick (bool):
 # true: auto-select the completion when only one remains
@@ -82,7 +82,7 @@ $env.config.completions.quick = true
 # false: Do not partially complete
 # Partial Example: If a directory contains only files named "forage", "food", and "forest",
 #                  then typing "ls " and pressing <Tab> will partially complete the first two
-#                  letters, "f" and "o". If the directory also includes a file named "faster", 
+#                  letters, "f" and "o". If the directory also includes a file named "faster",
 #                  then only "f" would be partially completed.
 $env.config.completions.partial = true
 
@@ -104,16 +104,16 @@ $env.config.completions.external.enable = true
 $env.config.completions.external.max_results = 50
 
 # completer (closure with a |spans| parameter): A command to call for *argument* completions
-# to commands (internal or external). 
+# to commands (internal or external).
 #
 # The |spans| parameter is a list of strings representing the tokens (spans)
-# on the current commandline. It is always a list of at least two strings - The 
+# on the current commandline. It is always a list of at least two strings - The
 # command being completed plus the first argument of that command ("" if no argument has
 # been partially typed yet), and additional strings for additional arguments beyond
 # the first.
 #
 # This setting is usually set to a closure which will call a third-party completion system, such
-# as Carapace. 
+# as Carapace.
 #
 # Note: The following is an over-simplified completer command that will call Carapace if it
 # is installed. Please use the official Carapace completer, which can be generated automatically
@@ -172,13 +172,13 @@ $env.config.shell_integration.osc633 = true
 
 # reset_application_mode (bool):
 # true/false to enable/disable sending ESC[?1l to the terminal
-# This sequence is commonly used to keep cursor key modes in sync between the local 
+# This sequence is commonly used to keep cursor key modes in sync between the local
 # terminal and a remove SSH host.
 $env.config.shell_integration.reset_application_mode = true
 
 # bracketed_paste (bool):
 # true/false to enable/disable the bracketed-paste feature, which allows multiple-lines
-# to be pasted into Nushell at once without immediate execution. When disabled, 
+# to be pasted into Nushell at once without immediate execution. When disabled,
 # each pasted line is executed as it is received.
 # Note that bracketed paste is not currently supported on the Windows version of
 # Nushell.
@@ -209,7 +209,7 @@ $env.config.display_errors.exit_code = false
 
 # display_errors.termination_signal (bool):
 # true/false to enable/disable displaying a Nushell error when a child process is
-# terminated via any signal 
+# terminated via any signal
 $env.config.display_errors.termination_signal = true
 
 # -------------
@@ -225,7 +225,7 @@ $env.config.display_errors.termination_signal = true
 $env.config.footer_mode = 25
 
 # table.*
-# table_mode (string): 
+# table_mode (string):
 # One of: "default", "basic", "compact", "compact_double", "heavy", "light", "none", "reinforced",
 # "rounded", "thin", "with_love", "psql", "markdown", "dots", "restructured", "ascii_rounded",
 # or "basic_compact"
@@ -278,5 +278,5 @@ $env.config.table.abbreviated_row_count
 # false: Always apply `footer_mode` rules to the parent table
 $env.config.table.footer_inheritance = false
 
-source ~/.cache/nu/oh-my-posh.nu
-source ~/.cache/nu/zoxide.nu
+alias nu-open = open
+alias open = ^open

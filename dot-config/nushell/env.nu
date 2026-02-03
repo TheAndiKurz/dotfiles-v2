@@ -2,11 +2,6 @@
 #
 # version = "0.99.1"
 
-# Use nushell functions to define your right and left prompt
-$env.PROMPT_COMMAND = {|| create_left_prompt }
-# FIXME: This default is not implemented in rust code as of 2023-09-08.
-$env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
-
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
 $env.PROMPT_INDICATOR = {|| "> " }
@@ -60,14 +55,15 @@ $env.NU_PLUGIN_DIRS = [
 source ($nu.default-config-dir | path join 'paths.nu')
 
 # generated environment files
-mkdir ~/.cache/nu
-oh-my-posh init nu --config ($nu.default-config-dir | path join "shell.toml") --print | save --force "~/.cache/nu/oh-my-posh.nu"
-zoxide init --cmd cd nushell | save --force ~/.cache/nu/zoxide.nu
-carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+zoxide init --cmd cd nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+# oh-my-posh init nu --config ($nu.default-config-dir | path join "shell.toml") --print | save --force "~/.cache/nu/oh-my-posh.nu"
+# carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
+
 
 # my environment vars
-$env.EDITOR = "nvim"
+$env.EDITOR = "zed"
 
 $env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
 $env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
-
