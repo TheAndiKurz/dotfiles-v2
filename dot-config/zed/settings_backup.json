@@ -7,14 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vertical_scroll_margin": 10,
   "soft_wrap": "bounded",
   "preferred_line_length": 100,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "edit_predictions": {
     "mode": "subtle",
   },
   "features": {
-    "edit_prediction_provider": "supermaven",
+    "edit_prediction_provider": "zed",
   },
   "agent": {
     "always_allow_tool_actions": true,
@@ -42,6 +43,11 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "Gruber Darker",
+  },
+  "terminal": {
+    "shell": {
+      "program": "/usr/bin/nu",
+    },
   },
 }

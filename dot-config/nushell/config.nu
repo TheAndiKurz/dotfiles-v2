@@ -103,23 +103,6 @@ $env.config.completions.external.enable = true
 # path to this value. Has no effect if `...external.enable` (above) is set to `false`
 $env.config.completions.external.max_results = 50
 
-# completer (closure with a |spans| parameter): A command to call for *argument* completions
-# to commands (internal or external).
-#
-# The |spans| parameter is a list of strings representing the tokens (spans)
-# on the current commandline. It is always a list of at least two strings - The
-# command being completed plus the first argument of that command ("" if no argument has
-# been partially typed yet), and additional strings for additional arguments beyond
-# the first.
-#
-# This setting is usually set to a closure which will call a third-party completion system, such
-# as Carapace.
-#
-# Note: The following is an over-simplified completer command that will call Carapace if it
-# is installed. Please use the official Carapace completer, which can be generated automatically
-# by Carapace itself. See the Carapace documentation for the proper syntax.
-source ~/.cache/nu/carapace.nu
-
 # --------------------
 # Terminal Integration
 # --------------------

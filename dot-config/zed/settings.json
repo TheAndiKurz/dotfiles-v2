@@ -7,14 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_size": 17.0,
+  "vertical_scroll_margin": 10,
   "soft_wrap": "bounded",
   "preferred_line_length": 100,
   "relative_line_numbers": "enabled",
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
-  },
-  "features": {
-    "edit_prediction_provider": "zed",
   },
   "agent": {
     "always_allow_tool_actions": true,
@@ -25,7 +25,7 @@
     "model_parameters": [],
   },
   "disable_ai": false,
-  "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_family": "Iosevka Nerd Font",
   "vim_mode": true,
   "helix_mode": false,
   "telemetry": {
@@ -41,7 +41,12 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine Dawn",
-    "dark": "Oolong",
+    "light": "One Light",
+    "dark": "Gruber Darker",
+  },
+  "terminal": {
+    "shell": {
+      "program": "/usr/bin/nu",
+    },
   },
 }
