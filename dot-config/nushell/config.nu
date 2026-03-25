@@ -61,7 +61,7 @@ $env.config.cursor_shape.vi_normal = "underscore"  # Cursor shape in normal vi m
 # Apply to the Nushell completion system
 
 # algorithm (string): Either "prefix" or "fuzzy"
-$env.config.completions.algorithm = "fuzzy"
+$env.config.completions.algorithm = "prefix"
 
 # sort (string): One of "smart" or "alphabetical"
 # In "smart" mode sort order is based on the "algorithm" setting.
@@ -90,8 +90,56 @@ $env.config.completions.partial = true
 # --------------------
 # External Completions
 # --------------------
-# completions.external.*: Settings related to completing external commands
-# and additional completers
+module git_completions {
+    def complete_branch [] {
+        ^git branch --format='%(refname:short)' | lines
+    }
+    def complete_remote [] {
+        ^git remote | lines
+    }
+    def complete_git_add [] {
+        ^git status --porcelain
+        | lines
+        | parse -r '^(?P<status>.{2}) (?P<file>.*)$'
+        | each {|row|
+            let clean_file = ($row.file | str replace -r '^"(.*)"$' '$1')
+            {
+                value: $clean_file
+                description: $row.status
+            }
+        }
+    }
+    export extern "git switch" [
+        branch?: string@complete_branch # The branch or commit to checkout
+        -c: string                      # Create a new branch with the given name
+        --force (-f)                    # Force checkout (discard local changes)
+    ]
+    export extern "git push" [
+        remote?: string@complete_remote   # The remote repository
+        branch?: string@complete_branch   # The branch to push
+        --force (-f)                      # Force push
+        --set-upstream (-u)               # Set upstream tracking
+    ]
+    export extern "git commit" [
+        --message (-m): string            # Commit message
+        --amend                           # Amend the last commit
+        --all (-a)                        # Stage all modified files
+    ]
+
+    export extern "git add" [
+        ...file: string@complete_git_add # The file(s) to stage
+        --all (-A)                       # Stage all changes
+        --patch (-p)                     # Interactively choose hunks to stage
+        --update (-u)                    # Update tracked files only (no untracked)
+        --force (-f)                     # Allow adding otherwise ignored files
+    ]
+
+    export extern git [
+        --version           # Print git version
+        --help              # Print help message
+    ]
+}
+use git_completions *
 
 # external.exnable (bool)
 # true: search for external commands on the Path

@@ -62,8 +62,10 @@ zoxide init --cmd cd nushell | save -f ($nu.data-dir | path join "vendor/autoloa
 # carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
 
 
-# my environment vars
-$env.EDITOR = "zed"
-
 $env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
-$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
+$env.PATH = ($env.PATH | append $env.PNPM_HOME )
+
+$env.GHC_HOME = $"($env.HOME)/.ghcup/bin"
+$env.PATH = ($env.PATH | append $env.GHC_HOME )
+
+$env.EDITOR = "zed"

@@ -7,7 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "buffer_font_size": 17.0,
+  "git_panel": {
+    "tree_view": true
+  },
+  "buffer_font_size": 14.0,
   "vertical_scroll_margin": 10,
   "soft_wrap": "bounded",
   "preferred_line_length": 100,
@@ -17,15 +20,17 @@
     "mode": "subtle",
   },
   "agent": {
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-pro",
+      "model": "gemini-3-flash-preview",
     },
     "model_parameters": [],
   },
   "disable_ai": false,
-  "buffer_font_family": "Iosevka Nerd Font",
+  "buffer_font_family": ".ZedMono",
   "vim_mode": true,
   "helix_mode": false,
   "telemetry": {
@@ -42,7 +47,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruber Darker",
+    "dark": "Ayu Dark",
   },
   "terminal": {
     "shell": {

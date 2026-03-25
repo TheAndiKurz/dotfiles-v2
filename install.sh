@@ -13,6 +13,7 @@ if [ -e ~/.bashrc ] && [ ! -L ~/.bashrc ]; then
     echo "Moving current .bashrc to .bashrc.bkp"
     mv ~/.bashrc ~/.bashrc.bkp
 fi
+ln -sf ~/dotfiles/dot-fonts ~/.fonts
 ln -sf ~/dotfiles/dot-bashrc ~/.bashrc
 ln -sf ~/dotfiles/dot-gitconfig ~/.gitconfig
 

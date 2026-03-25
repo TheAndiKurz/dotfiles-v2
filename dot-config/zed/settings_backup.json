@@ -7,21 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_size": 14.0,
   "vertical_scroll_margin": 10,
   "soft_wrap": "bounded",
   "preferred_line_length": 100,
   "relative_line_numbers": "enabled",
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
-  },
-  "features": {
-    "edit_prediction_provider": "zed",
   },
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-pro",
+      "model": "gemini-3-flash-preview",
     },
     "model_parameters": [],
   },
@@ -43,7 +42,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruber Darker",
+    "dark": "Ayu Dark",
   },
   "terminal": {
     "shell": {
