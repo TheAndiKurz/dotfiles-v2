@@ -141,6 +141,27 @@ module git_completions {
 }
 use git_completions *
 
+module dnf_completions {
+    def complete_dnf_packages_available [] {
+        dnf --quiet list --available | lines | drop nth 0
+    }
+
+    def complete_dnf_packages_installed [] {
+        dnf --quiet list --installed | lines | drop nth 0
+    }
+
+    export extern "dnf install" [
+        ...packages: string@complete_dnf_packages_available
+        --yes(-y)  # accept all prompts
+    ]
+
+    export extern "dnf remove" [
+        ...packages: string@complete_dnf_packages_installed
+        --yes(-y)  # accept all prompts
+    ]
+}
+use dnf_completions *
+
 # external.exnable (bool)
 # true: search for external commands on the Path
 # false: disabling might be desired for performance if your path includes
@@ -308,6 +329,3 @@ $env.config.table.abbreviated_row_count
 #       then also display the footer for the parent table
 # false: Always apply `footer_mode` rules to the parent table
 $env.config.table.footer_inheritance = false
-
-alias nu-open = open
-alias open = ^open

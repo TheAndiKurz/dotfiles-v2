@@ -68,4 +68,8 @@ $env.PATH = ($env.PATH | append $env.PNPM_HOME )
 $env.GHC_HOME = $"($env.HOME)/.ghcup/bin"
 $env.PATH = ($env.PATH | append $env.GHC_HOME )
 
-$env.EDITOR = "zed"
+if ("~/.cargo" | path exists) {
+    source "~/.cargo/env.nu"
+}
+
+$env.EDITOR = "nvim"
