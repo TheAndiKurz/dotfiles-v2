@@ -52,8 +52,6 @@ $env.NU_PLUGIN_DIRS = [
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
-source ($nu.default-config-dir | path join 'paths.nu')
-
 # generated environment files
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
@@ -70,6 +68,10 @@ $env.PATH = ($env.PATH | append $env.GHC_HOME )
 
 if ("~/.cargo" | path exists) {
     source "~/.cargo/env.nu"
+}
+
+if ("~/go" | path exists) {
+  $env.PATH = ($env.PATH | append ("~/go/bin"))
 }
 
 $env.EDITOR = "nvim"

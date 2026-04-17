@@ -329,3 +329,4 @@ $env.config.table.abbreviated_row_count
 #       then also display the footer for the parent table
 # false: Always apply `footer_mode` rules to the parent table
 $env.config.table.footer_inheritance = false
+source "~/.cargo/env.nu"
