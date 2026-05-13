@@ -1,6 +1,8 @@
-theme = Ayu Mirage
-font-family = "FiraCode Nerd Font"
+theme = Gruvbox Dark Hard
+font-family = "Hack"
 
 confirm-close-surface = false
 clipboard-read = allow
 clipboard-write = allow
+
+custom-shader = shaders/trail.glsl

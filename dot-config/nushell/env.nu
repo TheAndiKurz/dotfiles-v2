@@ -66,6 +66,9 @@ $env.PATH = ($env.PATH | append $env.PNPM_HOME )
 $env.GHC_HOME = $"($env.HOME)/.ghcup/bin"
 $env.PATH = ($env.PATH | append $env.GHC_HOME )
 
+$env.PATH = ($env.PATH | append "/opt/anaconda/bin")
+$env.PATH = ($env.PATH | append "/opt/anaconda/condabin")
+
 if ("~/.cargo" | path exists) {
     source "~/.cargo/env.nu"
 }
