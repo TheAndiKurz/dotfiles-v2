@@ -22,6 +22,7 @@ ln -sf ~/dotfiles/dot-config/fontconfig ~/.config/
 ln -sf ~/dotfiles/dot-config/ghostty ~/.config/
 ln -sf ~/dotfiles/dot-config/zed ~/.config/
 ln -sf ~/dotfiles/dot-config/nushell ~/.config/
+ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 
 if ! hash konsave 2>/dev/null; then
     konsave -r theandikurz
@@ -31,5 +32,8 @@ fi
 if ! hash starship 2>/dev/null; then
     curl -sS https://starship.rs/install.sh | sh
 fi
+
+echo "Keyremaps with keyd, this needs sudo rights."
+sudo ln -sf ~/dotfiles/keyd.conf /etc/keyd/default.conf
 
 source ~/.bashrc

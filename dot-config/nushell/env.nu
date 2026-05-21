@@ -49,22 +49,13 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-# To load from a custom file you can use:
-# source ($nu.default-config-dir | path join 'custom.nu')
-
-# generated environment files
-mkdir ($nu.data-dir | path join "vendor/autoload")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-zoxide init --cmd cd nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
-# oh-my-posh init nu --config ($nu.default-config-dir | path join "shell.toml") --print | save --force "~/.cache/nu/oh-my-posh.nu"
-# carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
-
-
 $env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
 $env.PATH = ($env.PATH | append $env.PNPM_HOME )
 
 $env.GHC_HOME = $"($env.HOME)/.ghcup/bin"
 $env.PATH = ($env.PATH | append $env.GHC_HOME )
+
+$env.PATH = ($env.PATH | append "~/.local/bin")
 
 $env.PATH = ($env.PATH | append "/opt/anaconda/bin")
 $env.PATH = ($env.PATH | append "/opt/anaconda/condabin")
@@ -78,3 +69,12 @@ if ("~/go" | path exists) {
 }
 
 $env.EDITOR = "nvim"
+
+# generated environment files
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+zoxide init --cmd cd nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+# oh-my-posh init nu --config ($nu.default-config-dir | path join "shell.toml") --print | save --force "~/.cache/nu/oh-my-posh.nu"
+# carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
+
+
