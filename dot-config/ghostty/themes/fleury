@@ -1,0 +1,44 @@
+# fleury Ghostty Theme
+# Converted from the original Emacs theme by Shams Parvez Arka
+
+# --- Core Colors ---
+ # original background 020202
+background = 101010
+foreground = b99468
+cursor-color = 66bc11
+cursor-text = 020202
+selection-background = 003939
+selection-foreground = b99468
+
+# --- ANSI Palette ---
+# Black / Bright Black (charcoal-gray / dim-gray)
+palette = 0=#212121
+palette = 8=#666666
+
+# Red / Bright Red (burnt-orange / bright-red)
+palette = 1=#de451f
+palette = 9=#ff0000
+
+# Green / Bright Green (dusty-sage / fresh-green)
+palette = 2=#9ba290
+palette = 10=#66bc11
+
+# Yellow / Bright Yellow (golden-yellow / sunflower-yellow)
+palette = 3=#f0bb0c
+palette = 11=#edb211
+
+# Blue / Bright Blue (sky-blue)
+palette = 4=#2895c7
+palette = 12=#2895c7
+
+# Magenta / Bright Magenta (dusty-rose / vivid-vermilion)
+palette = 5=#dc7575
+palette = 13=#f0500c
+
+# Cyan / Bright Cyan (aqua-ice)
+palette = 6=#8ffff2
+palette = 14=#8ffff2
+
+# White / Bright White (light-bronze / amber-gold)
+palette = 7=#b99468
+palette = 15=#fcaa05
