@@ -1,0 +1,255 @@
+# fleury.toml
+# Helix port of the Fleury Neovim theme.
+# Converted from the original Emacs theme by Shams Parvez Arka.
+
+# Editor UI
+"ui.background" = { fg = "light_bronze", bg = "rich_black" }
+"ui.text" = "light_bronze"
+"ui.text.focus" = { fg = "pure_black", bg = "amber_gold" }
+"ui.text.inactive" = "dim_gray"
+"ui.text.info" = { fg = "amber_gold", modifiers = ["bold"] }
+"ui.text.directory" = "sunflower_yellow"
+
+"ui.cursor" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.primary" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.normal" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.insert" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.select" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.primary.normal" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.primary.insert" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.primary.select" = { fg = "rich_black", bg = "fresh_green" }
+"ui.cursor.match" = { bg = "sky_blue_lite" }
+
+"ui.selection" = { bg = "lime_green" }
+"ui.selection.primary" = { bg = "lime_green" }
+
+"ui.cursorline.primary" = { bg = "charcoal_gray_lite" }
+"ui.cursorline.secondary" = { bg = "charcoal_gray_lite" }
+"ui.cursorcolumn.primary" = { bg = "charcoal_gray_lite" }
+"ui.cursorcolumn.secondary" = { bg = "charcoal_gray_lite" }
+
+"ui.linenr" = { fg = "medium_gray", bg = "rich_black" }
+"ui.linenr.selected" = { fg = "light_bronze", bg = "charcoal_gray_lite" }
+
+"ui.gutter" = { bg = "rich_black" }
+"ui.gutter.selected" = { bg = "charcoal_gray_lite" }
+
+"ui.window" = "light_bronze"
+"ui.background.separator" = "light_bronze"
+
+"ui.virtual.ruler" = { bg = "charcoal_gray_lite" }
+"ui.virtual.whitespace" = "medium_gray"
+"ui.virtual.indent-guide" = "charcoal_gray"
+"ui.virtual.wrap" = "medium_gray"
+"ui.virtual.jump-label" = { fg = "pure_black", bg = "amber_gold", modifiers = ["bold"] }
+
+# Status line
+"ui.statusline" = { fg = "mode_line_foreground_active", bg = "mode_line_background_active" }
+"ui.statusline.inactive" = { fg = "mode_line_foreground_active", bg = "rich_black" }
+"ui.statusline.normal" = { fg = "mode_line_foreground_active", bg = "mode_line_background_active" }
+"ui.statusline.insert" = { fg = "pure_black", bg = "fresh_green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "pure_black", bg = "amber_gold", modifiers = ["bold"] }
+"ui.statusline.separator" = "mode_line_border"
+
+# Buffer line
+"ui.bufferline" = { fg = "mode_line_foreground_active", bg = "rich_black" }
+"ui.bufferline.active" = { fg = "mode_line_foreground_active", bg = "mode_line_background_active" }
+"ui.bufferline.background" = { bg = "rich_black" }
+
+# Popups and menus
+"ui.popup" = { fg = "light_bronze", bg = "jet_black" }
+"ui.popup.info" = { fg = "amber_gold", bg = "jet_black" }
+"ui.help" = { fg = "light_bronze", bg = "jet_black" }
+
+"ui.menu" = { fg = "amber_gold", bg = "coffee_brown" }
+"ui.menu.selected" = { fg = "pure_black", bg = "amber_gold" }
+"ui.menu.scroll" = { fg = "light_bronze", bg = "charcoal_gray" }
+
+"ui.picker.header" = { fg = "amber_gold", bg = "jet_black", modifiers = ["bold"] }
+"ui.picker.header.column" = "light_bronze"
+"ui.picker.header.column.active" = { fg = "pure_black", bg = "amber_gold", modifiers = ["bold"] }
+
+# Search and matching
+"ui.highlight" = { fg = "pure_black", bg = "vivid_vermilion" }
+"ui.highlight.frameline" = { fg = "pure_black", bg = "golden_yellow" }
+
+"ui.debug.breakpoint" = "bright_red"
+"ui.debug.active" = { bg = "sky_blue_lite" }
+
+# Comments
+"comment" = "dim_gray"
+"comment.line" = "dim_gray"
+"comment.block" = "dim_gray"
+"comment.line.documentation" = "fresh_green"
+"comment.block.documentation" = "fresh_green"
+
+# Keywords
+"keyword" = "goldenrod"
+"keyword.control" = "goldenrod"
+"keyword.control.conditional" = "goldenrod"
+"keyword.control.repeat" = "goldenrod"
+"keyword.control.import" = "goldenrod"
+"keyword.control.return" = "goldenrod"
+"keyword.control.exception" = "goldenrod"
+"keyword.function" = "goldenrod"
+"keyword.operator" = "goldenrod"
+"keyword.storage" = "goldenrod"
+"keyword.storage.type" = "goldenrod"
+"keyword.storage.modifier" = "goldenrod"
+"keyword.directive" = "dusty_rose"
+
+# Strings
+"string" = "bright_orange"
+"string.regexp" = "bright_orange"
+"string.special" = "dusty_rose"
+"string.special.path" = "bright_orange"
+"string.special.url" = "sky_blue"
+"string.special.symbol" = "dusty_rose"
+
+# Constants
+"constant" = "bright_orange"
+"constant.numeric" = "bright_orange"
+"constant.numeric.integer" = "bright_orange"
+"constant.numeric.float" = "bright_orange"
+"constant.character" = "bright_orange"
+"constant.character.escape" = "dusty_rose"
+"constant.builtin" = "bright_orange"
+"constant.builtin.boolean" = "bright_orange"
+
+# Functions
+"function" = "burnt_orange"
+"function.method" = "burnt_orange"
+"function.method.private" = "burnt_orange"
+"function.macro" = "dusty_rose"
+"function.special" = "dusty_rose"
+"function.builtin" = "dusty_rose"
+
+# Variables
+"variable" = "sky_blue"
+"variable.parameter" = "sky_blue"
+"variable.other" = "sky_blue"
+"variable.builtin" = "dusty_rose"
+"variable.other.member" = "light_bronze"
+"variable.other.member.private" = "light_bronze"
+
+# Types and namespaces
+"type" = "sunflower_yellow"
+"type.builtin" = "sunflower_yellow"
+"type.parameter" = "sunflower_yellow"
+"type.enum" = "sunflower_yellow"
+"type.enum.variant" = "sunflower_yellow"
+"constructor" = "sunflower_yellow"
+"namespace" = "sunflower_yellow"
+
+# Attributes and special syntax
+"attribute" = "dusty_rose"
+"special" = "dusty_rose"
+"tag" = "sunflower_yellow"
+"tag.builtin" = "dusty_rose"
+
+"operator" = "light_bronze"
+"punctuation" = "light_bronze"
+"punctuation.delimiter" = "light_bronze"
+"punctuation.bracket" = "light_bronze"
+"punctuation.special" = "dusty_rose"
+"label" = "light_bronze"
+
+# Markup
+"markup.heading" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.marker" = "dusty_rose"
+"markup.heading.1" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+
+"markup.list" = "goldenrod"
+"markup.list.unnumbered" = "goldenrod"
+"markup.list.numbered" = "goldenrod"
+"markup.list.checked" = "fresh_green"
+"markup.list.unchecked" = "dim_gray"
+
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"markup.link.url" = { fg = "sky_blue", underline = { style = "line" } }
+"markup.link.label" = "sunflower_yellow"
+"markup.link.text" = "light_bronze"
+
+"markup.quote" = "dusty_sage"
+"markup.raw" = "bright_orange"
+"markup.raw.inline" = "bright_orange"
+"markup.raw.block" = "bright_orange"
+
+# Completion and hover markup
+"markup.normal.completion" = "light_bronze"
+"markup.normal.hover" = "light_bronze"
+"markup.heading.completion" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.heading.hover" = { fg = "sunflower_yellow", modifiers = ["bold"] }
+"markup.raw.inline.completion" = "bright_orange"
+"markup.raw.inline.hover" = "bright_orange"
+
+# Diagnostics
+"error" = { fg = "bright_red", modifiers = ["bold"] }
+"warning" = { fg = "coffee_brown", modifiers = ["bold"] }
+"info" = "fresh_green"
+"hint" = "sky_blue"
+
+"diagnostic" = { underline = { color = "dim_gray", style = "curl" } }
+"diagnostic.error" = { underline = { color = "bright_red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "coffee_brown", style = "curl" } }
+"diagnostic.info" = { underline = { color = "fresh_green", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "sky_blue", style = "curl" } }
+"diagnostic.unnecessary" = { fg = "dim_gray", modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Inlay hints and snippets
+"ui.virtual.inlay-hint" = "dim_gray"
+"ui.virtual.inlay-hint.parameter" = "dusty_sage"
+"ui.virtual.inlay-hint.type" = "sunflower_yellow"
+
+"tabstop" = { fg = "pure_black", bg = "golden_yellow" }
+
+# Version-control diff
+"diff.plus" = "fresh_green"
+"diff.plus.gutter" = "fresh_green"
+"diff.minus" = "bright_red"
+"diff.minus.gutter" = "bright_red"
+"diff.delta" = "golden_yellow"
+"diff.delta.gutter" = "golden_yellow"
+"diff.delta.moved" = "sky_blue"
+"diff.delta.conflict" = "vivid_vermilion"
+
+# Palette must remain at the end of the file.
+[palette]
+rich_black = "#101010"
+light_bronze = "#b99468"
+charcoal_gray = "#212121"
+charcoal_gray_lite = "#1e1e1e"
+gunmetal_blue = "#303040"
+dark_slate = "#222425"
+amber_gold = "#fcaa05"
+medium_gray = "#404040"
+jet_black = "#121212"
+dim_gray = "#666666"
+goldenrod = "#f0c674"
+bright_orange = "#ffaa00"
+dusty_rose = "#dc7575"
+sunflower_yellow = "#edb211"
+burnt_orange = "#de451f"
+sky_blue = "#2895c7"
+sky_blue_lite = "#2f2f38"
+bright_red = "#ff0000"
+fresh_green = "#66bc11"
+lime_green = "#003939"
+vivid_vermilion = "#f0500c"
+golden_yellow = "#f0bb0c"
+pure_black = "#000000"
+aqua_ice = "#8ffff2"
+dusty_sage = "#9ba290"
+coffee_brown = "#63523d"
+mode_line_foreground_active = "#e7aa4d"
+mode_line_background_active = "#1a120b"
+mode_line_border = "#161616"

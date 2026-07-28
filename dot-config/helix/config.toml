@@ -1,6 +1,7 @@
-theme = "gruvbox"
+theme = "naysayer_fixed"
 
 [editor]
+clipboard-provider = "wayland"
 line-number = "relative"
 mouse = false
 

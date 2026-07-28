@@ -1,0 +1,99 @@
+inherits = "naysayer"
+
+# Diagnostic dots / gutter indicators
+error = "diag-error"
+warning = "diag-warning"
+info = "diag-info"
+hint = "diag-hint"
+
+# Preserve the underlying syntax colours
+["diagnostic.error".underline]
+color = "diag-error"
+style = "curl"
+
+["diagnostic.warning".underline]
+color = "diag-warning"
+style = "curl"
+
+["diagnostic.info".underline]
+color = "diag-info"
+style = "curl"
+
+["diagnostic.hint".underline]
+color = "diag-hint"
+style = "curl"
+
+# Also repair actual selections
+["ui.selection"]
+bg = "selection-muted"
+
+["ui.selection.primary"]
+bg = "selection-primary"
+
+["ui.popup"]
+fg = "popup-fg"
+bg = "popup-bg" 
+
+["ui.popup.info"]
+fg = "popup-fg"
+bg = "popup-bg" 
+
+# Command-description/help boxes
+["ui.help"]
+fg = "popup-fg"
+bg = "popup-bg" 
+
+["ui.menu"]
+fg = "popup-fg"
+bg = "popup-bg"
+
+["ui.menu.selected"]
+fg = "popup-selected-fg"
+bg = "popup-selected-bg"
+modifiers = ["bold"]
+
+["ui.text.info"]
+fg = "popup-accent"
+
+["ui.cursor"]
+fg = "cursor-text"
+bg = "cursor-secondary"
+
+["ui.cursor.primary"]
+fg = "cursor-text"
+bg = "cursor-primary"
+
+["markup.normal.hover"]
+fg = "popup-fg"
+bg = "popup-bg"
+
+["markup.heading.hover"]
+fg = "popup-heading"
+bg = "popup-bg"
+modifiers = ["bold"]
+
+["markup.raw.inline.hover"]
+fg = "popup-code"
+bg = "popup-code-bg"
+
+[palette]
+diag-error = "#ff5f5f"
+diag-warning = "#ffaa00"
+diag-info = "#66d9ef"
+diag-hint = "#a1efe4"
+
+selection-muted = "#16474f"
+selection-primary = "#205b65"
+
+popup-bg = "#262626"
+popup-fg = "#ead4b7"
+popup-selected-bg = "#1b5961"
+popup-selected-fg = "#ffffff"
+popup-accent = "#a1efe4"
+popup-heading = "#ffffff"
+popup-code = "#a1efe4"
+popup-code-bg = "#092a2f"
+
+cursor-primary = "#66d9ef"
+cursor-secondary = "#4090a0"
+cursor-text = "#062329"
