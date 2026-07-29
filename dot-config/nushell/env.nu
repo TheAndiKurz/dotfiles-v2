@@ -57,9 +57,6 @@ $env.PATH = ($env.PATH | append $env.GHC_HOME )
 
 $env.PATH = ($env.PATH | append "~/.local/bin")
 
-$env.PATH = ($env.PATH | append "/opt/anaconda/bin")
-$env.PATH = ($env.PATH | append "/opt/anaconda/condabin")
-
 if ("~/.cargo" | path exists) {
     source "~/.cargo/env.nu"
 }
@@ -76,5 +73,4 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 zoxide init --cmd cd nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 # oh-my-posh init nu --config ($nu.default-config-dir | path join "shell.toml") --print | save --force "~/.cache/nu/oh-my-posh.nu"
 # carapace _carapace nushell | save --force ~/.cache/nu/carapace.nu
-
 
