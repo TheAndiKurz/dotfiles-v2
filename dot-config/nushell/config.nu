@@ -134,6 +134,13 @@ module git_completions {
         --force (-f)                     # Allow adding otherwise ignored files
     ]
 
+    export extern "git rebase" [
+        branch?: string@complete_branch # The file(s) to stage
+        --interactive (-i)              # lets the user decide what to rebase
+        --abort                         # abort the current rebase
+        --continue                      # fixed conflics, continue with next commit
+    ]
+
     export extern git [
         --version           # Print git version
         --help              # Print help message
