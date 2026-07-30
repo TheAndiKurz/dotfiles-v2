@@ -17,7 +17,6 @@
 (define oil-keymaps
   (hash "normal"
     (hash
-      "space" ':oil-enter
       "ret" ':oil-enter
       "-" ':oil-up
       "q" ':oil-close

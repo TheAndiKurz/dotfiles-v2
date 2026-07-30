@@ -1,9 +1,14 @@
 theme = "naysayer_fixed"
 
 [editor]
-clipboard-provider = "wayland"
+clipboard-provider = "termcode"
 line-number = "relative"
 mouse = false
+
+[editor.auto-save]
+focus-lost = true
+afterdelay.enables = true
+afterdelay.timeout = 5000 # 5 seconds of not editing the file will trigger this
 
 [editor.cursor-shape]
 insert = "bar"
