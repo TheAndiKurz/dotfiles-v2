@@ -6,6 +6,7 @@
 	defaultBranch = main
 [core]
 	autocrlf = input
+	editor = hx
 [push]
 	autoSetupRemote = true
 [pull]

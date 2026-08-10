@@ -1,7 +1,8 @@
 theme = "naysayer_fixed"
+# theme = "noctalia"
 
 [editor]
-clipboard-provider = "termcode"
+clipboard-provider = "wayland"
 line-number = "relative"
 mouse = false
 
@@ -26,3 +27,7 @@ skip-levels = 0
 [editor.inline-diagnostics]
 cursor-line = "hint"
 other-lines = "warning"
+
+[keys.normal]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"

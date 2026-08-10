@@ -1,8 +1,11 @@
-font-family = "Ioskeley Mono Condensed"
-font-size = 12
+theme = noctalia
+font-family = "Ioskeley Mono"
+font-size = 15
 
 confirm-close-surface = true
 clipboard-read = allow
 clipboard-write = allow
+
+background-opacity = 0.8
 
 # custom-shader = shaders/trail.glsl

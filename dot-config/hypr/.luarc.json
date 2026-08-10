@@ -1,0 +1,8 @@
+{
+  "workspace": {
+    "library": ["./typings"]
+  },
+  "diagnostics": {
+    "globals": ["hl"]
+  }
+}
