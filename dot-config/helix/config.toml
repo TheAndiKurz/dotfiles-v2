@@ -5,6 +5,7 @@ theme = "naysayer_fixed"
 clipboard-provider = "wayland"
 line-number = "relative"
 mouse = false
+end-of-line-diagnostics = "disable"
 
 [editor.auto-save]
 focus-lost = true
@@ -25,9 +26,12 @@ character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 0
 
 [editor.inline-diagnostics]
-cursor-line = "hint"
-other-lines = "warning"
+cursor-line = "warning"
+other-lines = "disable"
 
 [keys.normal]
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
+
+[keys.insert]
+"C-h" = "signature_help"

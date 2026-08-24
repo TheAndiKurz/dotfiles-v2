@@ -122,3 +122,6 @@ set -Ux EDITOR hx
 set -Ux VISUAL hx
 
 zoxide init --cmd cd fish | source
+
+# opencode
+fish_add_path /home/andik/.opencode/bin

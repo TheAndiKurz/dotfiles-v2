@@ -1,5 +1,6 @@
 [language-server.typescript-language-server]
-args = [ "--stdio" ]
+command = "tsgo"
+args = [ "--lsp", "--stdio" ]
 config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }
 
 [[language]]
@@ -8,4 +9,5 @@ auto-format = true
 
 [[language]]
 name = "go"
+formatter = { command = "gofmt" }
 auto-format = true

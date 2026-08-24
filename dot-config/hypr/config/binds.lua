@@ -9,7 +9,7 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 -- Window manipulation
 hl.bind(mainMod .. " + Escape",      hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q",           hl.dsp.window.close())
-hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + F",   hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D",           hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind(mainMod .. " + F",           hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + J",           hl.dsp.layout("togglesplit"))
@@ -59,7 +59,7 @@ hl.bind(mainMod .. " + X",           hl.dsp.exec_cmd(noctCall .. "panel-toggle c
 hl.bind(mainMod .. " + Space",       hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + period",      hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher /emo"))
 hl.bind(mainMod .. " + CONTROL + L", hl.dsp.exec_cmd(noctCall .. "session lock"))
-hl.bind(mainMod .. " + ALT + C",     hl.dsp.exec_cmd(noctCall .. "panel-toggle session"))
+hl.bind(mainMod .. " + F4",          hl.dsp.exec_cmd(noctCall .. "panel-toggle session"))
 
 ---------------------------
 ---- HARDWARE CONTROLS ----
@@ -109,6 +109,10 @@ for i = 1, NUM_WPM do
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 end
 
+hl.bind(
+    "SUPER + G",
+    hl.dsp.focus({ workspace = "name:gaming" })
+)
 -- Window move
 for i = 1, NUM_WPM do
     local key = i % 10

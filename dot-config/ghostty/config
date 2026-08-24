@@ -6,6 +6,6 @@ confirm-close-surface = true
 clipboard-read = allow
 clipboard-write = allow
 
-background-opacity = 0.8
+background-opacity = 1
 
 # custom-shader = shaders/trail.glsl
