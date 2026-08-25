@@ -1,4 +1,5 @@
-theme = "naysayer_fixed"
+# theme = "naysayer_fixed"
+theme = "gruber-darker"
 # theme = "noctalia"
 
 [editor]
