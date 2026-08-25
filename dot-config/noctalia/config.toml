@@ -1,17 +1,17 @@
 [bar.default]
 background_opacity = 0.5
-start = ["clock", "spacer", "group:g1"]
-center = [ "workspaces", "spacer_2", "active_window" ]
-end = [ "tray", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session" ]
+start = [ "workspaces", "active_window" ]
+center = [ "clock" ]
+end = [ "group:g1", "tray", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session" ]
 font_family = "Ioskeley Mono"
 font_weight = 400
 margin_ends = 0
 radius_top_left = 0
 radius_top_right = 0
-reserve_space = false
+reserve_space = true
 scale = 1.5
 show_on_workspace_switch = false
-smart_auto_hide = true
+smart_auto_hide = false
 
     [[bar.default.capsule_group]]
     enabled = true
