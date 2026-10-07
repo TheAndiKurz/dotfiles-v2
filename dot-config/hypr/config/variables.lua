@@ -8,7 +8,8 @@ CALCULATOR   = "gnome-calculator"
 MUSIC        = "spotify"
 
 -- Monitors
-MONITOR1 = "DP-3"
+LAPTOP = "eDP-1"
+DESKTOP = "DP-3"
 MONITOR2 = ""
 MONITOR3 = ""
 PRIMARY_MONITOR = MONITOR1
